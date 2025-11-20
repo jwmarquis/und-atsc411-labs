@@ -16,3 +16,5 @@ dependencies:
   - requests
   - netcdf4
   - cartopy
+  - herbie-data
+
