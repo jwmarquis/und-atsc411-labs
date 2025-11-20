@@ -72,7 +72,7 @@ def get_xarray(H,model):
     elif model=='nam':
         #open data as xarray
         #isobaric
-        ds_vert = H.xarray(r":(UGRD|VGRD|HGT|TMP|RH):\d+ mb",product='awphys',remove_grib=False)
+        ds_vert = H.xarray(r":(UGRD|VGRD|HGT|TMP|RH):\d+ mb",remove_grib=False)
         ds_vert = ds_vert.drop_vars('valid_time')
         #surface & hght above ground (opens 3 xarray datasets)
         ds_sfc = H.xarray(r":(TMP|HGT|OROG|PRES|RH|UGRD|VGRD):(10 m above ground|2 m above ground|surface):",remove_grib=False)
